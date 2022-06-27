@@ -8,22 +8,22 @@ import java.util.Objects;
 
 @Data
 @Document(collection = "transacciones")
-public class Transacciones {
+public class Transactions {
     @Id
     private String id;
-    private String origen;
-    private String destinatario;
-    private Double cantidad;
-    private String fecha;
+    private String source;
+    private String receiver;
+    private Double amount;
+    private String date;
 
     @Override
     public String toString() {
         return "Transacciones{" +
                 "id='" + id + '\'' +
-                ", origen='" + origen + '\'' +
-                ", destinatario='" + destinatario + '\'' +
-                ", cantidad=" + cantidad +
-                ", fecha='" + fecha + '\'' +
+                ", source='" + source + '\'' +
+                ", receiver='" + receiver + '\'' +
+                ", amount=" + amount +
+                ", date='" + date + '\'' +
                 '}';
     }
 
@@ -31,12 +31,12 @@ public class Transacciones {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Transacciones that = (Transacciones) o;
-        return id.equals(that.id) && origen.equals(that.origen) && destinatario.equals(that.destinatario) && cantidad.equals(that.cantidad) && fecha.equals(that.fecha);
+        Transactions that = (Transactions) o;
+        return id.equals(that.id) && source.equals(that.source) && receiver.equals(that.receiver) && amount.equals(that.amount) && date.equals(that.date);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, origen, destinatario, cantidad, fecha);
+        return Objects.hash(id, source, receiver, amount, date);
     }
 }

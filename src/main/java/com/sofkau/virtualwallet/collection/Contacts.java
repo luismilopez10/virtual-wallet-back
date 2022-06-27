@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Objects;
 
 @Data
-public class Contactos {
+public class Contacts {
 
 private String email;
 private String nickname;
@@ -22,7 +22,7 @@ private String nickname;
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Contactos contactos = (Contactos) o;
+        Contacts contactos = (Contacts) o;
         return email.equals(contactos.email) && nickname.equals(contactos.nickname);
     }
 

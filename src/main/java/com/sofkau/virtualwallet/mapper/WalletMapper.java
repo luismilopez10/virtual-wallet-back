@@ -2,10 +2,10 @@ package com.sofkau.virtualwallet.mapper;
 
 import com.sofkau.virtualwallet.collection.Admin;
 import com.sofkau.virtualwallet.collection.Colaborador;
-import com.sofkau.virtualwallet.collection.Transacciones;
+import com.sofkau.virtualwallet.collection.Transactions;
 import com.sofkau.virtualwallet.dto.AdminDTO;
-import com.sofkau.virtualwallet.dto.ColaboradorDTO;
-import com.sofkau.virtualwallet.dto.TransaccionesDTO;
+import com.sofkau.virtualwallet.dto.CollaboratorDTO;
+import com.sofkau.virtualwallet.dto.TransactionsDTO;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
@@ -25,19 +25,19 @@ public class WalletMapper {
         return modelMapper.map(dto, Admin.class);
     }
 
-    public ColaboradorDTO toColaboradorDTO(Colaborador colab) {
-        return modelMapper.map(colab, ColaboradorDTO.class);
+    public CollaboratorDTO toColaboradorDTO(Colaborador colab) {
+        return modelMapper.map(colab, CollaboratorDTO.class);
     }
 
-    public Colaborador toEntity(ColaboradorDTO dto) {
+    public Colaborador toEntity(CollaboratorDTO dto) {
         return modelMapper.map(dto, Colaborador.class);
     }
 
-    public TransaccionesDTO toTransaccionesDTO(Transacciones transac) {
-        return modelMapper.map(transac, TransaccionesDTO.class);
+    public TransactionsDTO toTransaccionesDTO(Transactions transac) {
+        return modelMapper.map(transac, TransactionsDTO.class);
     }
 
-    public Transacciones toEntity(TransaccionesDTO dto) {
-        return modelMapper.map(dto, Transacciones.class);
+    public Transactions toEntity(TransactionsDTO dto) {
+        return modelMapper.map(dto, Transactions.class);
     }
 }

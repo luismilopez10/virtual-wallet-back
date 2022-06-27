@@ -1,7 +1,7 @@
 package com.sofkau.virtualwallet.repository;
 
-import com.sofkau.virtualwallet.collection.Colaborador;
+import com.sofkau.virtualwallet.collection.Collaborator;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
-public interface IColaboradorRepository extends ReactiveMongoRepository<Colaborador, String> {
+public interface IColaboradorRepository extends ReactiveMongoRepository<Collaborator, String> {
 }

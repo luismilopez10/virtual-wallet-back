@@ -8,24 +8,24 @@ import java.util.List;
 import java.util.Objects;
 
 @Data
-@Document(collection = "colaborador")
-public class Colaborador {
+@Document(collection = "collaborator")
+public class Collaborator {
     //atributos
     @Id
     private String id;
     private String email;
-    private String nombre;
+    private String name;
     private Double balance;
-    private List<Contactos> listaContactos;
+    private List<Contacts> contactsList;
 
     @Override
     public String toString() {
-        return "Colaborador{" +
+        return "Collaborator{" +
                 "id='" + id + '\'' +
                 ", email='" + email + '\'' +
-                ", nombre='" + nombre + '\'' +
+                ", name='" + name + '\'' +
                 ", balance=" + balance +
-                ", listaContactos=" + listaContactos +
+                ", contactsList=" + contactsList +
                 '}';
     }
 
@@ -33,12 +33,12 @@ public class Colaborador {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Colaborador that = (Colaborador) o;
-        return id.equals(that.id) && email.equals(that.email) && nombre.equals(that.nombre) && balance.equals(that.balance) && listaContactos.equals(that.listaContactos);
+        Collaborator that = (Collaborator) o;
+        return id.equals(that.id) && email.equals(that.email) && name.equals(that.name) && balance.equals(that.balance) && contactsList.equals(that.contactsList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, nombre, balance, listaContactos);
+        return Objects.hash(id, email, name, balance, contactsList);
     }
 }

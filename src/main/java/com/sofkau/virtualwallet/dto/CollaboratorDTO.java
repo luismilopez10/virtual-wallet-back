@@ -1,15 +1,15 @@
 package com.sofkau.virtualwallet.dto;
 
-import com.sofkau.virtualwallet.collection.Contactos;
+import com.sofkau.virtualwallet.collection.Contacts;
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class ColaboradorDTO {
+public class CollaboratorDTO {
     private String id;
     private String email;
-    private String nombre;
+    private String name;
     private Double balance;
-    private List<Contactos> listaContactos;
+    private List<Contacts> contactsList;
 }

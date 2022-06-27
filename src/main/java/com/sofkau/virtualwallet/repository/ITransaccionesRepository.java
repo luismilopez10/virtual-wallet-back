@@ -1,7 +1,7 @@
 package com.sofkau.virtualwallet.repository;
 
-import com.sofkau.virtualwallet.collection.Transacciones;
+import com.sofkau.virtualwallet.collection.Transactions;
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
-public interface ITransaccionesRepository extends ReactiveMongoRepository<Transacciones, String> {
+public interface ITransaccionesRepository extends ReactiveMongoRepository<Transactions, String> {
 }
