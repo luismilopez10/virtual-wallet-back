@@ -21,7 +21,7 @@ public class WalletMapper {
         return modelMapper.map(admin, AdminDTO.class);
     }
 
-    public Admin toEntity(AdminDTO dto) {
+    public Admin toAdminEntity(AdminDTO dto) {
         return modelMapper.map(dto, Admin.class);
     }
 
@@ -29,7 +29,7 @@ public class WalletMapper {
         return modelMapper.map(colab, CollaboratorDTO.class);
     }
 
-    public Collaborator toEntity(CollaboratorDTO dto) {
+    public Collaborator toCollaboratorEntity(CollaboratorDTO dto) {
         return modelMapper.map(dto, Collaborator.class);
     }
 
@@ -37,7 +37,7 @@ public class WalletMapper {
         return modelMapper.map(transac, TransactionsDTO.class);
     }
 
-    public Transactions toEntity(TransactionsDTO dto) {
+    public Transactions toTransactionsEntity(TransactionsDTO dto) {
         return modelMapper.map(dto, Transactions.class);
     }
 }
