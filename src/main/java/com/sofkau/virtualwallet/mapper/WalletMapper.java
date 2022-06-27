@@ -1,7 +1,7 @@
 package com.sofkau.virtualwallet.mapper;
 
 import com.sofkau.virtualwallet.collection.Admin;
-import com.sofkau.virtualwallet.collection.Colaborador;
+import com.sofkau.virtualwallet.collection.Collaborator;
 import com.sofkau.virtualwallet.collection.Transactions;
 import com.sofkau.virtualwallet.dto.AdminDTO;
 import com.sofkau.virtualwallet.dto.CollaboratorDTO;
@@ -25,15 +25,16 @@ public class WalletMapper {
         return modelMapper.map(dto, Admin.class);
     }
 
-    public CollaboratorDTO toColaboradorDTO(Colaborador colab) {
+    public CollaboratorDTO toCollaboratorDTO(Collaborator colab) {
         return modelMapper.map(colab, CollaboratorDTO.class);
     }
 
-    public Colaborador toEntity(CollaboratorDTO dto) {
-        return modelMapper.map(dto, Colaborador.class);
+    public Collaborator
+    toEntity(CollaboratorDTO dto) {
+        return modelMapper.map(dto, Collaborator.class);
     }
 
-    public TransactionsDTO toTransaccionesDTO(Transactions transac) {
+    public TransactionsDTO toTransactionsDTO(Transactions transac) {
         return modelMapper.map(transac, TransactionsDTO.class);
     }
 
