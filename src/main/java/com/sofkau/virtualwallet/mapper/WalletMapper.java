@@ -29,8 +29,7 @@ public class WalletMapper {
         return modelMapper.map(colab, CollaboratorDTO.class);
     }
 
-    public Collaborator
-    toEntity(CollaboratorDTO dto) {
+    public Collaborator toEntity(CollaboratorDTO dto) {
         return modelMapper.map(dto, Collaborator.class);
     }
 

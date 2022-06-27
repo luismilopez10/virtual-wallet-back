@@ -16,7 +16,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class GetCollaboratorRoute {
 
     public RouterFunction<ServerResponse> allCollaborators(GetCollaboratorUseCase get) {
-        return route(GET("/api/get/collaborators"),
+        return route(GET("/api/get/collaborator"),
                 request -> ServerResponse.status(HttpStatus.OK)
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromProducer(get.apply(), CollaboratorDTO.class))
