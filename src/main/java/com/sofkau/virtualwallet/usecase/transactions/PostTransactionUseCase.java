@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
-public class PostTrasactionUseCase { ;
+public class PostTransactionUseCase { ;
     private ITransactionsRepository repository;
     private WalletMapper mapper;
 
-    public PostTrasactionUseCase(ITransactionsRepository repository, WalletMapper mapper) {
+    public PostTransactionUseCase(ITransactionsRepository repository, WalletMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }
