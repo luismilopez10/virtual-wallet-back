@@ -9,11 +9,13 @@ import reactor.core.publisher.Flux;
 
 @Service
 public class GetCollaboratorUseCase {
-    @Autowired
     private ICollaboratorRepository iCollaboratorRepository;
-    @Autowired
     private WalletMapper walletMapper;
 
+    public GetCollaboratorUseCase(ICollaboratorRepository iCollaboratorRepository, WalletMapper walletMapper) {
+        this.iCollaboratorRepository = iCollaboratorRepository;
+        this.walletMapper = walletMapper;
+    }
 
     public Flux<CollaboratorDTO> apply(){return iCollaboratorRepository.findAll().map(walletMapper::toCollaboratorDTO);}
 }

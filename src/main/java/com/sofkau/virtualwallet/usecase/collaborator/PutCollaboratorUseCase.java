@@ -11,10 +11,13 @@ import reactor.core.publisher.Mono;
 @Service
 @Validated
 public class PutCollaboratorUseCase {
-    @Autowired
     private ICollaboratorRepository iCollaboratorRepository;
-    @Autowired
     private WalletMapper walletMapper;
+
+    public PutCollaboratorUseCase(ICollaboratorRepository iCollaboratorRepository, WalletMapper walletMapper) {
+        this.iCollaboratorRepository = iCollaboratorRepository;
+        this.walletMapper = walletMapper;
+    }
 
     public Mono<CollaboratorDTO> apply(CollaboratorDTO dto){
         return iCollaboratorRepository
