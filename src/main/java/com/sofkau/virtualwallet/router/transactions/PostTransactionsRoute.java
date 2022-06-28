@@ -1,7 +1,7 @@
 package com.sofkau.virtualwallet.router.transactions;
 
 import com.sofkau.virtualwallet.dto.TransactionsDTO;
-import com.sofkau.virtualwallet.usecase.transactions.PostTrasactionUseCase;
+import com.sofkau.virtualwallet.usecase.transactions.PostTransactionUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class PostTransactionsRoute {
     @Bean
-    public RouterFunction<ServerResponse> postTransaction (PostTrasactionUseCase useCase) {
+    public RouterFunction<ServerResponse> postTransaction (PostTransactionUseCase useCase) {
         return route(POST("/api/post/transaction").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(TransactionsDTO.class)
                         .flatMap(useCase::apply)
