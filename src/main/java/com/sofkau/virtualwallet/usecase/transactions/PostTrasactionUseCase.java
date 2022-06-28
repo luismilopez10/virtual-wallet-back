@@ -19,4 +19,7 @@ public class PostTrasactionUseCase { ;
         this.mapper = mapper;
     }
 
+    public Mono<TransactionsDTO> apply (TransactionsDTO dto) {
+        return repository.save(mapper.toTransactionsEntity(dto)).map(transactions -> mapper.toTransactionsDTO(transactions));
+    } 
 }
