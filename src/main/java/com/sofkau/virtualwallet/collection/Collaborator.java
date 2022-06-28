@@ -12,7 +12,6 @@ import java.util.Objects;
 public class Collaborator {
     //atributos
     @Id
-    private String id;
     private String email;
     private String name;
     private Double balance;
@@ -21,7 +20,6 @@ public class Collaborator {
     @Override
     public String toString() {
         return "Collaborator{" +
-                "id='" + id + '\'' +
                 ", email='" + email + '\'' +
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
@@ -34,11 +32,11 @@ public class Collaborator {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Collaborator that = (Collaborator) o;
-        return id.equals(that.id) && email.equals(that.email) && name.equals(that.name) && balance.equals(that.balance) && contactsList.equals(that.contactsList);
+        return  email.equals(that.email) && name.equals(that.name) && balance.equals(that.balance) && contactsList.equals(that.contactsList);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, email, name, balance, contactsList);
+        return Objects.hash( email, name, balance, contactsList);
     }
 }

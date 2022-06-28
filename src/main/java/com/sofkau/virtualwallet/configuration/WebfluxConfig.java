@@ -20,5 +20,5 @@ public class WebfluxConfig implements WebFluxConfigurer {
                         .allowedMethods("*"); //GET, POST, PUT , DELETE
             }
         };
-    }
+        }
 }
