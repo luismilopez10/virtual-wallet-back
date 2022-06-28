@@ -2,6 +2,7 @@ package com.sofkau.virtualwallet.router.collaborator;
 
 import com.sofkau.virtualwallet.dto.CollaboratorDTO;
 import com.sofkau.virtualwallet.usecase.collaborator.GetCollaboratorUseCase;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,7 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class GetCollaboratorRoute {
-
+@Bean
     public RouterFunction<ServerResponse> allCollaborators(GetCollaboratorUseCase get) {
         return route(GET("/api/get/collaborator"),
                 request -> ServerResponse.status(HttpStatus.OK)

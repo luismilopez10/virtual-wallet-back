@@ -11,7 +11,6 @@ import reactor.core.publisher.Mono;
 @Service
 @Validated
 public class PutCollaboratorUseCase {
-
     @Autowired
     private ICollaboratorRepository iCollaboratorRepository;
     @Autowired

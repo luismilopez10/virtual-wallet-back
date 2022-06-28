@@ -2,6 +2,7 @@ package com.sofkau.virtualwallet.router.collaborator;
 
 import com.sofkau.virtualwallet.dto.CollaboratorDTO;
 import com.sofkau.virtualwallet.usecase.collaborator.PutCollaboratorUseCase;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RouterFunction;
@@ -13,7 +14,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class PutCollaboratorRoute {
-
+    @Bean
     public RouterFunction<ServerResponse> updateCollaborator(PutCollaboratorUseCase putCollaboratorUseCase){
         return route(PUT("/api/update/collaborator").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(CollaboratorDTO.class)
