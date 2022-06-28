@@ -7,7 +7,6 @@ import java.util.List;
 
 @Data
 public class CollaboratorDTO {
-    private String id;
     private String email;
     private String name;
     private Double balance;
