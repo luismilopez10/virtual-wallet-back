@@ -18,6 +18,6 @@ public class PutCollaboratorUseCase {
 
     public Mono<CollaboratorDTO> apply(CollaboratorDTO dto){
         return iCollaboratorRepository
-                .save(walletMapper.toEntity(dto))
+                .save(walletMapper.toCollaboratorEntity(dto))
                 .map(walletMapper::toCollaboratorDTO);}
 }
