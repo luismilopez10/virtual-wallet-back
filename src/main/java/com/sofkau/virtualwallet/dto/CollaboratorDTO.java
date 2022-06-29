@@ -11,4 +11,5 @@ public class CollaboratorDTO {
     private String name;
     private Double balance;
     private List<Contacts> contactsList;
+    private Boolean logged;
 }

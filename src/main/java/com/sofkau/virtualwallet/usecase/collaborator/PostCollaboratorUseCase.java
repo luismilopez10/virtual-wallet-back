@@ -3,7 +3,6 @@ package com.sofkau.virtualwallet.usecase.collaborator;
 import com.sofkau.virtualwallet.dto.CollaboratorDTO;
 import com.sofkau.virtualwallet.mapper.WalletMapper;
 import com.sofkau.virtualwallet.repository.ICollaboratorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 import reactor.core.publisher.Mono;
